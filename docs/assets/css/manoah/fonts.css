@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Rocher";
+  src: url(https://assets.codepen.io/144736/RocherColorGX.woff2);
+}
+
+@font-palette-values --pink {
+  font-family: "Rocher";
+  base-palette: 1;
+}
+
+@font-palette-values --green {
+  font-family: "Rocher";
+  base-palette: 2;
+}
+
+@font-palette-values --blue {
+  font-family: "Rocher";
+  base-palette: 4;
+}
+
+@font-palette-values --gray {
+  font-family: "Rocher";
+  base-palette: 9;
+}
