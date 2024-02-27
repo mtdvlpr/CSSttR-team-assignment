@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Rocher";
+  src: url(./../../font/RocherColorGX.woff2);
+}
+
+@font-palette-values --pink {
+  font-family: "Rocher";
+  base-palette: 1;
+}
+
+@font-palette-values --green {
+  font-family: "Rocher";
+  base-palette: 2;
+}
+
+@font-palette-values --gray {
+  font-family: "Rocher";
+  base-palette: 9;
+}
+
+@font-palette-values --custom {
+  font-family: "Rocher";
+  override-colors: 0 rgb(21, 58, 81), 1 rgb(255 215 0), 2 rgb(84 159 167),
+    3 rgb(128, 210, 219);
+}

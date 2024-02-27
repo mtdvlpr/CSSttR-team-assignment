@@ -4,10 +4,132 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/manoah/main.css" />
-    <title>Document</title>
+    <title>Manoah's Page</title>
     <base href="/CSSttR-team-assignment/" />
   </head>
   <body>
-    Manoah's Page
+    <div>
+      <header>
+        <h1>Hi! I'm Manoah.</h1>
+        <figure>
+          <img
+            src="https://avatars.githubusercontent.com/u/46671786"
+            alt="Profile picture"
+          />
+          <figcaption>
+            This is me. I'm using the mask-image property to get the cool
+            circle.
+          </figcaption>
+        </figure>
+      </header>
+      <form name="form">
+        <fieldset name="font-palette">
+          <legend>Font palette</legend>
+          <p>
+            These inputs control the <code>font-palette</code> CSS property of
+            the header font.
+          </p>
+          <label>
+            <input type="radio" name="font-palette" value="default" checked />
+            Default
+          </label>
+          <label>
+            <input type="radio" name="font-palette" value="pink" />
+            Pink
+          </label>
+          <label>
+            <input type="radio" name="font-palette" value="green" />
+            Green
+          </label>
+          <label>
+            <input type="radio" name="font-palette" value="gray" />
+            Gray
+          </label>
+          <label>
+            <input type="radio" name="font-palette" value="custom" />
+            Custom
+          </label>
+          <p>
+            With the <code>custom</code> option, I overwrite all colors with my
+            custom colors!
+          </p>
+        </fieldset>
+        <fieldset name="accent-color">
+          <legend>Accent color</legend>
+          <p>These inputs use the <code>accent-color</code> CSS property.</p>
+          <label>
+            <input type="radio" name="accent-color" value="blue" checked />
+            Blue
+          </label>
+          <label>
+            <input type="radio" name="accent-color" value="red" />
+            Red
+          </label>
+          <label>
+            <input type="radio" name="accent-color" value="pink" />
+            Pink
+          </label>
+          <p>My favorite color is blue!</p>
+        </fieldset>
+        <fieldset name="theme">
+          <legend>Color scheme</legend>
+          <p>
+            These options use the <code>color-scheme</code> property to change
+            which color scheme the browser uses.
+          </p>
+          <p>
+            The <code>system</code> option uses the
+            <code>prefers-color-scheme</code> media feature to get the color
+            scheme that the user prefers.
+          </p>
+          <label>
+            <input type="radio" name="theme" value="system" checked />
+            System
+          </label>
+          <label>
+            <input type="radio" name="theme" value="light" />
+            Light
+          </label>
+          <label>
+            <input type="radio" name="theme" value="dark" />
+            Dark
+          </label>
+          <p>Dark theme for life!</p>
+        </fieldset>
+        <fieldset name="color-mix">
+          <legend>Color mix</legend>
+          <p>
+            These inputs set the text color using the
+            <code>color-mix</code> function.
+          </p>
+          <p>First color</p>
+          <label>
+            <input type="radio" name="first-color" value="blue" checked />
+            Blue
+          </label>
+          <label>
+            <input type="radio" name="first-color" value="red" />
+            Red
+          </label>
+          <label>
+            <input type="radio" name="first-color" value="green" />
+            Green
+          </label>
+          <p>Second color</p>
+          <label>
+            <input type="radio" name="second-color" value="pink" checked />
+            Pink
+          </label>
+          <label>
+            <input type="radio" name="second-color" value="yellow" />
+            Yellow
+          </label>
+          <label>
+            <input type="radio" name="second-color" value="purple" />
+            Purple
+          </label>
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>

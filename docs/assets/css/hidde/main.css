@@ -1,0 +1,130 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+}
+
+header {
+  background-color: darkslateblue;
+  padding: 1em 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  margin: 1em;
+  position: absolute;
+  color: black;
+  left: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+section {
+  background-color: firebrick;
+  margin-bottom: 1em;
+  width: 80%;
+  border-radius: 1em;
+}
+
+p {
+  margin: 1em;
+}
+
+section:first-of-type {
+  padding: 1em;
+}
+
+main {
+  padding: 1em;
+}
+
+li {
+  margin: 0 2em;
+}
+
+section:nth-of-type(2) {
+  --c1: green;
+  --c2: crimson;
+  --c3: darkslateblue;
+  --c4: orange;
+  --c5: turquoise;
+  --c6: hotpink;
+  --c7: steelblue;
+
+  --solid: var(--c1), var(--c2), var(--c3), var(--c4), var(--c5), var(--c6),
+    var(--c7);
+  --solid-wrap: var(--solid), var(--c1);
+  --trans: var(--c1), transparent, var(--c2), transparent, var(--c3),
+    transparent, var(--c4), transparent, var(--c5), transparent, var(--c6),
+    transparent, var(--c7);
+  --trans-wrap: var(--trans), transparent, var(--c1);
+
+  background: radial-gradient(circle, var(--trans)),
+    conic-gradient(from 180deg, var(--trans-wrap)),
+    radial-gradient(circle, var(--trans)), conic-gradient(var(--solid-wrap));
+  background-blend-mode: overlay;
+  height: 100%;
+  mix-blend-mode: color-burn;
+  background-size: 100%;
+  background-position: center;
+  transition: 1s;
+}
+
+section:nth-child(2):hover {
+  background-size: 120%;
+}
+
+section:nth-child(2) > h2 {
+  padding-left: 1rem;
+  font-size: 5rem;
+  color: white;
+  mix-blend-mode: exclusion;
+  transition: 1s;
+}
+
+section:nth-child(2):hover h2 {
+  color: blue;
+}
+
+section:nth-of-type(3) {
+  color: white;
+  background-color: chartreuse;
+  overflow: hidden;
+  position: relative;
+  height: 50em;
+}
+
+section:nth-of-type(3) > h2 {
+  color: white;
+  padding: 0 0 9em 1rem;
+  font-size: 5rem;
+  background: url("../../img/LeavesPattern.jpg");
+  background-size: cover;
+  transition: 1s;
+  z-index: -1;
+}
+
+section:nth-of-type(3):hover h2 {
+  background-clip: text;
+  /* -webkit-text-fill-color: transparent; */
+  color: transparent;
+}
+
+section:nth-of-type(3) p {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+}
+
+section:nth-of-type(3):hover p {
+  color: black;
+}
