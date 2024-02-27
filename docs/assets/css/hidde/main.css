@@ -93,20 +93,19 @@ section:nth-child(2) > h2 {
 
 section:nth-child(2):hover h2 {
   color: blue;
-  mix-blend-mode: exclusion;
 }
 
 section:nth-of-type(3) {
   color: white;
-  background-color: darkslateblue;
+  background-color: chartreuse;
   overflow: hidden;
   position: relative;
-  height: 40em;
+  height: 50em;
 }
 
 section:nth-of-type(3) > h2 {
   color: white;
-  padding: 0 0 7em 1rem;
+  padding: 0 0 9em 1rem;
   font-size: 5rem;
   background: url("../../img/LeavesPattern.jpg");
   background-size: cover;
@@ -116,11 +115,16 @@ section:nth-of-type(3) > h2 {
 
 section:nth-of-type(3):hover h2 {
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  /* -webkit-text-fill-color: transparent; */
+  color: transparent;
 }
 
 section:nth-of-type(3) p {
   position: absolute;
   z-index: 1;
   bottom: 0;
+}
+
+section:nth-of-type(3):hover p {
+  color: black;
 }
