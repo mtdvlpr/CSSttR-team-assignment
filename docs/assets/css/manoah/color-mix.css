@@ -1,0 +1,35 @@
+:root {
+  --color-one: blue;
+  --color-two: pink;
+}
+
+fieldset[name="color-mix"] {
+  color: color-mix(in oklab, var(--color-one) 50%, var(--color-two) 50%);
+}
+
+:root:has(
+    fieldset[name="color-mix"] input[name="first-color"][value="red"]:checked
+  ) {
+  --color-one: red;
+}
+
+:root:has(
+    fieldset[name="color-mix"] input[name="first-color"][value="green"]:checked
+  ) {
+  --color-one: green;
+}
+
+:root:has(
+    fieldset[name="color-mix"]
+      input[name="second-color"][value="yellow"]:checked
+  ) {
+  --color-two: yellow;
+}
+
+:root:has(
+    fieldset[name="color-mix"]
+      input[name="second-color"][value="purple"]:checked
+  )
+  fieldset[name="color-mix"] {
+  --color-two: purple;
+}
