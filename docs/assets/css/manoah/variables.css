@@ -1,0 +1,61 @@
+:root {
+  /* Light colors */
+  --text-color-light: #213547;
+  --bg-color-light: #ffffff;
+  --link-color-light: #646cff;
+  --link-hover-color-light: #747bff;
+  --button-color-light: #f9f9f9;
+  --button-hover-color-light: #646cff;
+
+  /* Dark colors */
+  --text-color-dark: rgba(255, 255, 255, 0.87);
+  --bg-color-dark: #242424;
+  --link-color-dark: #646cff;
+  --link-hover-color-dark: #535bf2;
+  --button-color-dark: #1a1a1a;
+  --button-hover-color-dark: #646cff;
+}
+
+/* System prefers light */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: var(--text-color-light);
+    --bg-color: var(--bg-color-light);
+    --link-color: var(--link-color-light);
+    --link-hover-color: var(--link-hover-color-light);
+    --button-color: var(--button-color-light);
+    --button-hover-color: var(--link-hover-color-light);
+  }
+}
+
+/* System prefers dark or no preference */
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+  :root {
+    --text-color: var(--text-color-dark);
+    --bg-color: var(--bg-color-dark);
+    --link-color: var(--link-color-dark);
+    --link-hover-color: var(--link-hover-color-dark);
+    --button-color: var(--button-color-dark);
+    --button-hover-color: var(--link-hover-color-dark);
+  }
+}
+
+/* Dark mode explicitly set */
+:root:has(input[name="theme"][value="dark"]:checked) {
+  --text-color: var(--text-color-dark);
+  --bg-color: var(--bg-color-dark);
+  --link-color: var(--link-color-dark);
+  --link-hover-color: var(--link-hover-color-dark);
+  --button-color: var(--button-color-dark);
+  --button-hover-color: var(--link-hover-color-dark);
+}
+
+/* Light mode explicitly set */
+:root:has(input[name="theme"][value="light"]:checked) {
+  --text-color: var(--text-color-light);
+  --bg-color: var(--bg-color-light);
+  --link-color: var(--link-color-light);
+  --link-hover-color: var(--link-hover-color-light);
+  --button-color: var(--button-color-light);
+  --button-hover-color: var(--link-hover-color-light);
+}

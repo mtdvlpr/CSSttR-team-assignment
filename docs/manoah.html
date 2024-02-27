@@ -4,10 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="assets/css/manoah/main.css" />
-    <title>Document</title>
+    <title>Manoah's Page</title>
     <base href="/CSSttR-team-assignment/" />
   </head>
   <body>
-    Manoah's Page
+    <div>
+      <header>
+        <h1>Hi! I'm Manoah.</h1>
+      </header>
+      <form name="form">
+        <fieldset name="accent-color">
+          <legend>Accent color</legend>
+          <p>These inputs use the <code>accent-color</code> CSS property.</p>
+          <label>
+            <input type="radio" name="accent-color" value="blue" checked />
+            Blue
+          </label>
+          <label>
+            <input type="radio" name="accent-color" value="red" />
+            Red
+          </label>
+          <label>
+            <input type="radio" name="accent-color" value="pink" />
+            Pink
+          </label>
+        </fieldset>
+        <fieldset name="theme">
+          <legend>Color scheme</legend>
+          <p>
+            These options use the <code>color-scheme</code> property to change
+            which color scheme the browser uses.
+          </p>
+          <p>
+            The <code>system</code> option uses the
+            <code>prefers-color-scheme</code> media feature to get the color
+            scheme that the user prefers.
+          </p>
+          <label>
+            <input type="radio" name="theme" value="system" checked />
+            System
+          </label>
+          <label>
+            <input type="radio" name="theme" value="light" />
+            Light
+          </label>
+          <label>
+            <input type="radio" name="theme" value="dark" />
+            Dark
+          </label>
+        </fieldset>
+      </form>
+    </div>
   </body>
 </html>
