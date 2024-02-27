@@ -9,7 +9,98 @@
 </head>
 
 <body>
-
+    <header>
+        <a href="index.html">Back to homepage</a>
+        <h1>Hidde's Page</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Theme: Colors</h2>
+            <p>The theme that we got was colors. I got to experiment with different ways to use colors in CSS. This are
+                the subjects that i've looked into.</p>
+            <ul>
+                <li>
+                    Blend-mode
+                </li>
+                <li>
+                    Mask Properties
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Blend-mode</h2>
+            <p>
+                section:nth-of-type(2) {<br>
+                --c1: green;<br>
+                --c2: crimson;<br>
+                --c3: darkslateblue;<br>
+                --c4: orange;<br>
+                --c5: turquoise;<br>
+                --c6: hotpink;<br>
+                --c7: steelblue;<br>
+                <br>
+                --solid: var(--c1), var(--c2), var(--c3), var(--c4), var(--c5), var(--c6),<br>
+                var(--c7);<br>
+                --solid-wrap: var(--solid), var(--c1);<br>
+                --trans: var(--c1), transparent, var(--c2), transparent, var(--c3),<br>
+                transparent, var(--c4), transparent, var(--c5), transparent, var(--c6),<br>
+                transparent, var(--c7);<br>
+                --trans-wrap: var(--trans), transparent, var(--c1);<br>
+                <br>
+                background: radial-gradient(circle, var(--trans)),<br>
+                conic-gradient(from 180deg, var(--trans-wrap)),<br>
+                radial-gradient(circle, var(--trans)), conic-gradient(var(--solid-wrap));<br>
+                background-blend-mode: overlay;<br>
+                height: 100%;<br>
+                mix-blend-mode: color-burn;<br>
+                height: 10em;<br>
+                background-size: 120%;<br>
+                background-position: center;<br>
+                transition: 1s;<br>
+                }<br>
+                <br>
+                section:nth-child(2):hover {<br>
+                background-size: 100%;<br>
+                }<br>
+                <br>
+                section:nth-child(2) > h2 {<br>
+                padding-left: 1rem;<br>
+                font-size: 5rem;<br>
+                color: white;<br>
+                mix-blend-mode: exclusion;<br>
+                transition: 1s;<br>
+                }<br>
+                <br>
+                section:nth-child(2):hover h2 {<br>
+                color: blue;<br>
+                mix-blend-mode: exclusion;<br>
+                }<br>
+            </p>
+        </section>
+        <section>
+            <h2>Mask Properties</h2>
+            <p>section:nth-of-type(3) {<br>
+                background-color: darkslateblue;<br>
+                height: 10em;<br>
+                overflow: hidden;<br>
+                }<br>
+                <br>
+                section:nth-of-type(3) > h2 {<br>
+                color: white;<br>
+                padding: 0 0 0.75em 1rem;<br>
+                font-size: 5rem;<br>
+                background: url("../../img/LeavesPattern.jpg");<br>
+                background-size: cover;<br>
+                transition: 1s;<br>
+                }<br>
+                <br>
+                section:nth-of-type(3):hover h2 {<br>
+                background-clip: text;<br>
+                -webkit-text-fill-color: transparent;<br>
+                }<br>
+            </p>
+        </section>
+    </main>
 </body>
 
 </html>
