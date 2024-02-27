@@ -1,4 +1,122 @@
-/* test css file: works */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: lightblue;
+    accent-color: #ec5f5d;
+    font-family: Poppins, sans-serif;
+}
+
+/* in order not to have conflicting styles, we use ::after for the 'main effect', and use filter:contrast here. */
+div:nth-of-type(2) {
+    width: 100dvw;
+    height: 100dvh;
+    aspect-ratio: 1;
+    background: white;
+    filter: contrast(50);
+    /* adapt the halftone into an interesting background */
+    clip-path: polygon(0 35%, 0 100%, 100% 100%, 100% 70%);
+}
+
+/* the radial gradient is what is responsible for the main effect. */
+/* to achieve a more interesting pattern, layer two gradients over eachother as a mask. */
+div:nth-of-type(2)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    /* vary --bgSize to say how much space each dot has for itself. the smaller the number, the less space a dot is allowed to take up, the more dots.*/
+    /* aka.. declare the size of the dots */
+    --bgSize: 1.4rem;
+    /* vary --stop1 and --stop2 to increase the size difference between the top- and bottom dots. the greater the difference, the greater the contrast.*/
+    --stop1: 3%;
+    --stop2: 65%;
+
+    background-image: radial-gradient(
+            circle at center,
+            black var(--stop1),
+            transparent var(--stop2)
+        ),
+        radial-gradient(
+            circle at center,
+            black var(--stop1),
+            transparent var(--stop2)
+        );
+    background-size: var(--bgSize) var(--bgSize);
+    /* offset the second gradient from the first one to achieve this checkerboard/grid-like pattern */
+    background-position: 0 0, calc(var(--bgSize) / 2) calc(var(--bgSize) / 2);
+    /* gives the illusion of smaller dots at the bottom: towards the bottom the white begins to cover the dots and give the illusion that they are smaller than they really are.*/
+    mask-image: linear-gradient(rgb(0 0 0), rgba(255, 255, 255, 0.5));
+}
+
+/**============================================
+ *       FONT-PALETTE/ MULTI-COLOR FONTS
+ *=============================================**/
+
+@font-face {
+    font-family: "Rocher";
+    src: url(https://assets.codepen.io/144736/RocherColorGX.woff2);
+}
+
+/* use this role to reference the base-palette. the value is an index, 0 being the default, and going up to however many palettes the font comes with.*/
+/* rocher comes with 11.  you can assign from 0-10. */
+@font-palette-values --yellow {
+    font-family: "Rocher";
+    base-palette: 5;
+}
+
+@font-palette-values --pink {
+    font-family: "Rocher";
+    base-palette: 1;
+}
+
+@font-palette-values --green {
+    font-family: "Rocher";
+    base-palette: 2;
+}
+
+h1 {
+    font-family: "Rocher";
+    font-palette: --yellow;
+    font-size: clamp(1.5rem, 2.5rem, 3rem);
+}
+
+:has(input:nth-of-type(1):checked) h1 {
+    font-palette: --yellow;
+}
+
+:has(input:nth-of-type(2):checked) h1 {
+    font-palette: --pink;
+}
+
+:has(input:nth-of-type(3):checked) h1 {
+    font-palette: --green;
+}
+
+/**======================
+ *   unrelated styling
+ *========================**/
+
+form {
+    background: white;
+}
+
+div:first-of-type {
+    background: white;
+    padding: 2rem 5rem;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.088));
+    border-radius: 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    display: grid;
+    place-items: center;
+}
+
+input:not(:last-of-type) {
+    margin-right: 1rem;
 }
