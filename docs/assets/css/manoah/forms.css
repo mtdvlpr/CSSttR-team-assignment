@@ -1,0 +1,20 @@
+/* Form styles */
+form fieldset {
+  text-align: left;
+}
+
+form fieldset[name="accent-color"] {
+  accent-color: blue;
+}
+
+fieldset[name="accent-color"]:has(
+    input[name="accent-color"][value="red"]:checked
+  ) {
+  accent-color: red;
+}
+
+fieldset[name="accent-color"]:has(
+    input[name="accent-color"][value="pink"]:checked
+  ) {
+  accent-color: pink;
+}

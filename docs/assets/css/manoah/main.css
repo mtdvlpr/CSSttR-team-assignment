@@ -1,0 +1,62 @@
+/* Import css files */
+@import url("./variables.css");
+@import url("./buttons.css");
+@import url("./links.css");
+@import url("./forms.css");
+
+/* Main styles */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  box-sizing: border-box;
+  min-width: 320px;
+  min-height: 100vh;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+body > div {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    font-palette: light;
+    color-scheme: light;
+  }
+}
+
+/* System prefers dark or no preference */
+@media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
+  :root {
+    font-palette: dark;
+    color-scheme: dark;
+  }
+}
+
+/* Dark mode explicitly set */
+:root:has(input[name="theme"][value="dark"]:checked) {
+  font-palette: dark;
+  color-scheme: dark;
+}
+
+/* Light mode explicitly set */
+:root:has(input[name="theme"][value="light"]:checked) {
+  font-palette: light;
+  color-scheme: light;
+}
