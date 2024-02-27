@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Rocher";
-  src: url(https://assets.codepen.io/144736/RocherColorGX.woff2);
+  src: url(./../../font/RocherColorGX.woff2);
 }
 
 @font-palette-values --pink {
