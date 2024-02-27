@@ -4,7 +4,14 @@ header {
   margin: 0;
 }
 
+@media screen and (max-width: 500px) {
+  header {
+    font-size: 2rem;
+  }
+}
+
 header img {
+  max-width: 100%;
   -webkit-mask-image: radial-gradient(
     circle closest-side at 50% 35%,
     black 100%,
@@ -18,7 +25,7 @@ header img {
 }
 
 header figcaption {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 :root:has(input[name="font-palette"][value="pink"]:checked) header {
@@ -29,10 +36,10 @@ header figcaption {
   font-palette: --green;
 }
 
-:root:has(input[name="font-palette"][value="blue"]:checked) header {
-  font-palette: --blue;
-}
-
 :root:has(input[name="font-palette"][value="gray"]:checked) header {
   font-palette: --gray;
+}
+
+:root:has(input[name="font-palette"][value="custom"]:checked) header {
+  font-palette: --custom;
 }
