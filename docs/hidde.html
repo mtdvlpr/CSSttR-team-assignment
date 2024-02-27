@@ -73,13 +73,17 @@
                 <br>
                 section:nth-child(2):hover h2 {<br>
                 color: blue;<br>
-                mix-blend-mode: exclusion;<br>
-                }<br>
+                }<br><br>
+                I've experimented with blend mode. First I made the background using help from the article. Then I tried
+                to make the h2 blend in with the background. On hover I made the color change and this changes how it
+                looks.
             </p>
         </section>
         <section>
             <h2>Mask Properties</h2>
-            <p>section:nth-of-type(3) {<br>
+            <p>
+                (background-clip)<br>
+                section:nth-of-type(3) {<br>
                 background-color: darkslateblue;<br>
                 height: 10em;<br>
                 overflow: hidden;<br>
@@ -96,8 +100,15 @@
                 <br>
                 section:nth-of-type(3):hover h2 {<br>
                 background-clip: text;<br>
-                -webkit-text-fill-color: transparent;<br>
-                }<br>
+                /* -webkit-text-fill-color: transparent; */<br>
+                color: transparent;<br>
+                }<br><br>
+                For mask properties I wanted to make the background change into the shape of the h2 on hover. In the end
+                I used a background-clip wich is not mask property but does exactly what I wanted. I increased the
+                padding-bottom on the h2 to have the background cover the whole section. I've looked more into the
+                background-clip property and apparently you can use this to to tell the background what to cover. So
+                that could be: border-box, padding-box, content-box or text.<br><br>
+                Both background-clip: text; and color: transparent; used to be webkits but now are implemented into css.
             </p>
         </section>
     </main>
