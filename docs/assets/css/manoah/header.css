@@ -1,0 +1,45 @@
+header {
+  font-family: "Rocher";
+  font-size: 3rem;
+  margin: 0;
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    font-size: 2rem;
+  }
+}
+
+header img {
+  max-width: 100%;
+  -webkit-mask-image: radial-gradient(
+    circle closest-side at 50% 35%,
+    black 100%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  mask-image: radial-gradient(
+    circle closest-side at 50% 35%,
+    black 100%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+}
+
+header figcaption {
+  font-size: 1.5rem;
+}
+
+:root:has(input[name="font-palette"][value="pink"]:checked) header {
+  font-palette: --pink;
+}
+
+:root:has(input[name="font-palette"][value="green"]:checked) header {
+  font-palette: --green;
+}
+
+:root:has(input[name="font-palette"][value="gray"]:checked) header {
+  font-palette: --gray;
+}
+
+:root:has(input[name="font-palette"][value="custom"]:checked) header {
+  font-palette: --custom;
+}

@@ -11,8 +11,49 @@
     <div>
       <header>
         <h1>Hi! I'm Manoah.</h1>
+        <figure>
+          <img
+            src="https://avatars.githubusercontent.com/u/46671786"
+            alt="Profile picture"
+          />
+          <figcaption>
+            This is me. I'm using the mask-image property to get the cool
+            circle.
+          </figcaption>
+        </figure>
       </header>
       <form name="form">
+        <fieldset name="font-palette">
+          <legend>Font palette</legend>
+          <p>
+            These inputs control the <code>font-palette</code> CSS property of
+            the header font.
+          </p>
+          <label>
+            <input type="radio" name="font-palette" value="default" checked />
+            Default
+          </label>
+          <label>
+            <input type="radio" name="font-palette" value="pink" />
+            Pink
+          </label>
+          <label>
+            <input type="radio" name="font-palette" value="green" />
+            Green
+          </label>
+          <label>
+            <input type="radio" name="font-palette" value="gray" />
+            Gray
+          </label>
+          <label>
+            <input type="radio" name="font-palette" value="custom" />
+            Custom
+          </label>
+          <p>
+            With the <code>custom</code> option, I overwrite all colors with my
+            custom colors!
+          </p>
+        </fieldset>
         <fieldset name="accent-color">
           <legend>Accent color</legend>
           <p>These inputs use the <code>accent-color</code> CSS property.</p>
@@ -28,6 +69,7 @@
             <input type="radio" name="accent-color" value="pink" />
             Pink
           </label>
+          <p>My favorite color is blue!</p>
         </fieldset>
         <fieldset name="theme">
           <legend>Color scheme</legend>
@@ -52,6 +94,7 @@
             <input type="radio" name="theme" value="dark" />
             Dark
           </label>
+          <p>Dark theme for life!</p>
         </fieldset>
       </form>
     </div>
